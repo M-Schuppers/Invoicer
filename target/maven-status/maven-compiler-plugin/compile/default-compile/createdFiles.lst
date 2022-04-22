@@ -1,0 +1,13 @@
+org\invoicer\model\Product$tax.class
+org\invoicer\model\Product.class
+org\invoicer\model\Customer.class
+org\invoicer\controller\BusinessController.class
+org\invoicer\Main.class
+org\invoicer\controller\CustomerController.class
+org\invoicer\model\Business.class
+org\invoicer\controller\ProductController.class
+org\invoicer\model\Business$BusinessBuilder.class
+org\invoicer\model\Business$bCountry.class
+org\invoicer\controller\InvoiceController.class
+org\invoicer\model\Customer$country.class
+org\invoicer\model\Invoice.class
