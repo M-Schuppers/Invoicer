@@ -29,7 +29,9 @@ class BusinessControllerTest {
         final var result = b.addNewBusiness(ID, companyName, bAddress,
                 bHousenumber, bPostalcode, bPhonenumber, bEmailaddress);
 
-        final var expectedResult = new Business(ID,companyName,bAddress,bHousenumber,bPostalcode,bEmailaddress, bPhonenumber);
+        final var expectedResult = Business.builder().id(ID).companyName(companyName).bAddress(bAddress)
+                .bHousenumber(bHousenumber).bPostalcode(bPostalcode)
+                .bEmailaddress(bEmailaddress).bPhoneNumber(bPhonenumber).build();
 
 
         //then
@@ -40,11 +42,13 @@ class BusinessControllerTest {
         assertThat(result.getBPostalcode()).isEqualTo(expectedResult.getBPostalcode());
         assertThat(result.getBPhoneNumber()).isEqualTo(expectedResult.getBPhoneNumber());
         assertThat(result.getBEmailaddress()).isEqualTo(expectedResult.getBEmailaddress());
-        log.info("ID presented in result: " +String.valueOf(result.getBAddress())+ " and expected: " + expectedResult.getBAddress());
-        log.info("ID presented in result: " +String.valueOf(result.getBHousenumber())+ " and expected: " + expectedResult.getBHousenumber());
-        log.info("ID presented in result: " +String.valueOf(result.getBPostalcode())+ " and expected: " + expectedResult.getBPostalcode());
-        log.info("ID presented in result: " +String.valueOf(result.getBPhoneNumber())+ " and expected: " + expectedResult.getBPhoneNumber());
-        log.info("ID presented in result: " +String.valueOf(result.getBEmailaddress())+ " and expected: " + expectedResult.getBEmailaddress());
+        log.info("ID present in result: "+result.getId()+" and expected: "+ expectedResult.getId());
+        log.info("Company-name present in result: "+ result.getCompanyName()+" and expected: " + expectedResult.getCompanyName());
+        log.info("Address presented in result: " + result.getBAddress() + " and expected: " + expectedResult.getBAddress());
+        log.info("House-number presented in result: " + result.getBHousenumber() + " and expected: " + expectedResult.getBHousenumber());
+        log.info("ZipCode presented in result: " + result.getBPostalcode() + " and expected: " + expectedResult.getBPostalcode());
+        log.info("Phone number presented in result: " + result.getBPhoneNumber() + " and expected: " + expectedResult.getBPhoneNumber());
+        log.info("Email-address presented in result: " + result.getBEmailaddress() + " and expected: " + expectedResult.getBEmailaddress());
 
     }
 }

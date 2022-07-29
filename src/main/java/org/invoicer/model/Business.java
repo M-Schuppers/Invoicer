@@ -1,6 +1,9 @@
 package org.invoicer.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Getter
@@ -14,7 +17,10 @@ public class Business {
     private String bPostalcode;
     private String bEmailaddress;
     private String bPhoneNumber;
-    private enum bCountry{NETHERLANDS, BELGIUM, GERMANY};
+
+    private enum bCountry {NETHERLANDS, BELGIUM, GERMANY}
+
+    ;
 
 
 }
